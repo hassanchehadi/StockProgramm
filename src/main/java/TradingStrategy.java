@@ -1,4 +1,4 @@
-import net.sf.json.JSONObject;
+
 
 public class TradingStrategy {
     private double stopLossPercent = 0.05; // Beispiel: 5% Stoploss-Schwelle

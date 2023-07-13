@@ -5,7 +5,7 @@ import org.apache.http.client.methods.HttpGet;
 import org.apache.http.impl.client.HttpClientBuilder;
 import org.apache.http.util.EntityUtils;
 
-public class AlphaVantageAPI {
+public class ConnectorToAPI {
     private static final String API_KEY = "BBYI426JH9BO1FNN";
 
     public String getStockData(String symbol) throws Exception {

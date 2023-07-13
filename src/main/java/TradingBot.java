@@ -1,18 +1,18 @@
 public class TradingBot {
     private static final String SYMBOL = "AAPL";
 
-    private AlphaVantageAPI alphaVantageAPI;
+    private ConnectorToAPI connectorToAPI;
 
     private TradingStrategy tradingStrategy;
 
     public TradingBot() {
-        this.alphaVantageAPI = new AlphaVantageAPI();
+        this.connectorToAPI = new ConnectorToAPI();
         this.tradingStrategy = new TradingStrategy();
     }
 
     public void run() {
         try {
-            String stockData = alphaVantageAPI.getStockData(SYMBOL);
+            String stockData = connectorToAPI.getStockData(SYMBOL);
             double currentPrice = tradingStrategy.extractLastClosingPrice(stockData);
 
             double targetBuyPrice = tradingStrategy.calculateTargetBuyPrice(currentPrice);
