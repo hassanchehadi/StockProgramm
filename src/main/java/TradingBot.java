@@ -2,6 +2,7 @@ public class TradingBot {
     private static final String SYMBOL = "AAPL";
 
     private AlphaVantageAPI alphaVantageAPI;
+
     private TradingStrategy tradingStrategy;
 
     public TradingBot() {
